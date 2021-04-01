@@ -20,7 +20,7 @@ set $term alacritty
 # on the original workspace that the command was run on.
 set $menu dmenu_path | dmenu | xargs swaymsg exec --
 
-set $lock swaylock -i $HOME/.config/sway/background.png -s fill \
+set $lock swaylock -f -i $HOME/.config/sway/background.png -s fill \
     --clock --timestr %r --datestr %F \
     --fade-in 0.5 \
     --effect-blur 10x10 --effect-greyscale
@@ -40,10 +40,10 @@ output * bg $HOME/.config/sway/background.png fill
 #
 # Example configuration:
 #
-exec swayidle -w \
+exec swayidle \
          timeout 300 '$lock' \
-         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-         before-sleep '$lock'
+         timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' # \
+         # before-sleep '$lock'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
