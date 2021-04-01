@@ -142,6 +142,8 @@ exec swayidle -w \
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
 
+    bindsym $mod+Shift+plus move container to workspace
+
     bindsym $mod+Mod1+Left move workspace to output left
     bindsym $mod+Mod1+Right move workspace to output right
 #
@@ -235,3 +237,8 @@ include /etc/sway/config.d/*
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
+
+# Can't figure out how to disambiguate between a chrome window with
+# just meet and a chrome window with the current tab on meet
+
+# for_window [title="Meet - (.*) - Google Chrome"] move container to workspace meet, workspace meet
