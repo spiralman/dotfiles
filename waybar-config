@@ -39,8 +39,10 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": "{:%Y-%m-%d %r}",
+        "format": "{:%Y-%m-%d | %r %Z}",
         "interval": 1,
+        "timezones": ["America/Chicago", "UTC", "Asia/Tokyo"],
+        "smooth-scrolling-threshold": 5.0,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
     },
     "cpu": {
