@@ -67,6 +67,16 @@ workspace_layout tabbed
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
+input "2:14:ETPS/2_Elantech_Touchpad" {
+   tap disabled
+   click_method clickfinger
+   tap_button_map lrm
+}
+
+input "1133:45077:M720_Triathlon_Mouse" {
+   pointer_accel 0
+}
+
 ### Key bindings
 #
 # Basics:
