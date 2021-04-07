@@ -203,6 +203,30 @@ input "1133:45077:M720_Triathlon_Mouse" {
     # Show the next scratchpad window or hide the focused scratchpad window.
     # If there are multiple scratchpad windows, this command cycles through them.
     bindsym $mod+minus scratchpad show
+
+#
+# Screenshots:
+#
+    # To clipboard
+    # Currently Active Window
+    bindsym $mod+p       exec grimshot --notify copy active
+    # Select an area
+    bindsym $mod+Shift+p exec grimshot --notify copy area
+    # Entire active screen
+    bindsym $mod+Mod1+p  exec grimshot --notify copy output
+    # Select a window
+    bindsym $mod+Ctrl+p  exec grimshot --notify copy window
+
+    # To file
+    # Currently Active Window
+    bindsym $mod+i       exec grimshot --notify save active
+    # Select an area
+    bindsym $mod+Shift+i exec grimshot --notify save area
+    # Entire active screen
+    bindsym $mod+Mod1+i  exec grimshot --notify save output
+    # Select a window
+    bindsym $mod+Ctrl+i  exec grimshot --notify save window
+
 #
 # Resizing containers:
 #
