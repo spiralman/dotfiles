@@ -1,0 +1,5 @@
+dynamic_title: true
+bell:
+  animation: EaseOutSine
+  duration: 100
+  color: '#999999'
