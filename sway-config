@@ -164,8 +164,11 @@ input "1133:45077:M720_Triathlon_Mouse" {
     bindsym $mod+Mod1+Left move workspace to output left
     bindsym $mod+Mod1+Right move workspace to output right
 
-    bindsym Mod1+Tab workspace next
-    bindsym Mod1+Shift+Tab workspace prev
+    bindsym $mod+Ctrl+Left focus output left
+    bindsym $mod+Ctrl+Right focus output right
+
+    bindsym Mod1+Tab workspace next_on_output
+    bindsym Mod1+Shift+Tab workspace prev_on_output
 #
 # Layout stuff:
 #
