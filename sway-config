@@ -159,7 +159,7 @@ input "1133:45077:M720_Triathlon_Mouse" {
     # We just use 1-10 as the default.
 
     bindsym $mod+equal exec 'swaymsg -t get_workspaces | jq -r ".[].name" | dmenu | xargs -I % swaymsg workspace "%"'
-    bindsym $mod+Shift+equal exec 'swaymsg -t get_workspaces | jq -r ".[].name" | dmenu | xargs -I % swaymsg move container to workspace "%", workspace "%"'
+    bindsym $mod+Shift+equal exec 'export WORKSPACE=$(swaymsg -t get_workspaces | jq -r ".[].name" | dmenu) && swaymsg move container to workspace "$WORKSPACE" && swaymsg workspace "$WORKSPACE"'
 
     bindsym $mod+Mod1+Left move workspace to output left
     bindsym $mod+Mod1+Right move workspace to output right
