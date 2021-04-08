@@ -286,3 +286,5 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 # just meet and a chrome window with the current tab on meet
 
 # for_window [title="Meet - (.*) - Google Chrome"] move container to workspace meet, workspace meet
+
+for_window [app_id="org.gnome.Weather"] floating enable
