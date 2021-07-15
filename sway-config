@@ -44,6 +44,14 @@ exec swayidle \
          timeout 300 '$lock' \
          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' # \
          # before-sleep '$lock'
+
+# Note: this doesn't work correctly when you open meet in a new tab,
+# then move it to a new window, as it sets the inhibit_idle flag on
+# both the original chrome window and the meet window, then it never
+# leaves the original chrome window, so idle is inhibited until chrome
+# restarts.
+# for_window [class="Google-chrome" title="Meet - .* - Google Chrome"] inhibit_idle visible
+
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
