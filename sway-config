@@ -114,6 +114,11 @@ input "1133:45077:M720_Triathlon_Mouse" {
 
     # Exit sway (logs you out of your Wayland session)
     bindsym $mod+Shift+e exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -b 'Yes, exit sway' 'swaymsg exit'
+
+    # Backlight
+    # 0x1008FF2B is XF86WakeUp
+    bindsym 0x1008FF2B+F6 exec light -A 10
+    bindsym 0x1008FF2B+F5 exec light -U 10
 #
 # Moving around:
 #
