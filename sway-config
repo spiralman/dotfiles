@@ -117,8 +117,8 @@ input "1133:45077:M720_Triathlon_Mouse" {
 
     # Backlight
     # 0x1008FF2B is XF86WakeUp
-    bindsym 0x1008FF2B+F6 exec light -A 10
-    bindsym 0x1008FF2B+F5 exec light -U 10
+    bindsym 0x1008FF2B+F6 exec light -A 5
+    bindsym 0x1008FF2B+F5 exec light -U 5
 #
 # Moving around:
 #
