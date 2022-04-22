@@ -100,6 +100,7 @@ input "1133:45077:M720_Triathlon_Mouse" {
     # Start your launcher
     bindsym $mod+d exec $menu
 
+    # Lock the screen
     bindsym $mod+l exec $lock
 
     # Drag floating windows by holding down $mod and left mouse button.
@@ -308,3 +309,4 @@ exec hash dbus-update-activation-environment 2>/dev/null && \
 for_window [app_id="org.gnome.Weather"] floating enable
 for_window [title="DevTools"] floating enable
 for_window [title=".* is sharing your screen\.$"] move to scratchpad
+for_window [title="Qalculate.*"] floating enable, sticky enable
