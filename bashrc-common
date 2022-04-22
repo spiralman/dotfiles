@@ -65,6 +65,7 @@ alias 'gcauth-podman=gcloud auth print-access-token | podman login -u oauth2acce
 
 if command -v pyenv 1>/dev/null 2>&1
 then
+    eval "$(pyenv init --path)"
     eval "$(pyenv init -)"
     pyenv virtualenvwrapper
 fi
