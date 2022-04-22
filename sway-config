@@ -22,6 +22,8 @@ set $term alacritty
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt
 set $menu $term --class=launcher -e $HOME/.local/bin/sway-launcher-desktop.sh
 
+set $calc flatpak run io.github.Qalculate.qalculate-qt
+
 set $lock swaylock -f -i $HOME/.config/sway/background.png -s fill \
     --clock --timestr %r --datestr %F \
     --fade-in 0.5 \
@@ -102,6 +104,8 @@ input "1133:45077:M720_Triathlon_Mouse" {
 
     # Lock the screen
     bindsym $mod+l exec $lock
+
+    bindsym $mod+c exec $calc
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
