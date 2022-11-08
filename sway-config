@@ -304,7 +304,8 @@ bar {
 
 include /etc/sway/config.d/*
 
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK
+exec "systemctl --user import-environment DISPLAY WAYLAND_DISPLAY SWAYSOCK; systemctl --user start sway-session.target"
+
 exec hash dbus-update-activation-environment 2>/dev/null && \
      dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY SWAYSOCK
 exec /usr/libexec/polkit-gnome-authentication-agent-1
