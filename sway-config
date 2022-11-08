@@ -22,7 +22,7 @@ set $term alacritty
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 60 ppt
 set $menu $term --class=launcher -e $HOME/.local/bin/sway-launcher-desktop.sh
 
-set $calc flatpak run io.github.Qalculate.qalculate-qt
+set $calc qalculate-qt
 
 set $lock swaylock -f -i $HOME/.config/sway/background.png -s fill \
     --clock --timestr %r --datestr %F \
