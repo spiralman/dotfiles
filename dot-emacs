@@ -21,6 +21,8 @@
 
 (show-paren-mode 1)
 
+(eval-after-load 'tramp '(setenv "SHELL" "/bin/bash"))
+
 (setq exec-path (append exec-path '("~/bin" "/usr/local/bin")))
 
 (global-flycheck-mode)
