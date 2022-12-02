@@ -63,6 +63,8 @@ alias 'podme=podman run --mount=type=bind,src=/home/thomasstephens,dst=/home/tho
 
 alias 'gcauth-podman=gcloud auth print-access-token | podman login -u oauth2accesstoken --password-stdin https://us.gcr.io'
 
+alias 'android-emulator=emulator -avd android-29-4 -feature -GLDirectMem,-GLDMA,-GLDMA2'
+
 if command -v pyenv 1>/dev/null 2>&1
 then
     eval "$(pyenv init --path)"
