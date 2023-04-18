@@ -61,6 +61,15 @@
                (expand-file-name (concat "bin/" module ".js")
                                  package-directory)))))))
 
+(defun flycheck-node_modules-executable-find (executable)
+  "Use the EXECUTABLE from node_modules before the PATH."
+  (or
+   (let* ((base (locate-dominating-file buffer-file-name "node_modules"))
+          (cmd  (if base (expand-file-name (concat "node_modules/.bin/" executable)  base))))
+     (if (and cmd (file-exists-p cmd))
+         cmd))
+   (flycheck-default-executable-find executable)))
+
 ;; (icy-mode 1)
 
 ;; Mac/homebrew only?
@@ -242,6 +251,11 @@
 (add-hook 'rjsx-mode-hook
           (lambda ()
             (lunaryorn-use-js-executables-from-node-modules)))
+
+(add-hook 'typescript-mode-hook
+          (lambda ()
+            (setq column-enforce-column 99)
+            (setq-local flycheck-executable-find #'flycheck-node_modules-executable-find)))
 
 (setq web-mode-content-types-alist
       '(("jsx" . "\\.react.js$")))
