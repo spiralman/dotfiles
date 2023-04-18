@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/kubectl", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "battery", "tray"],
+    "modules-right": ["custom/kubectl", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "tray", "battery"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -34,8 +34,8 @@
         }
     },
     "tray": {
-        // "icon-size": 21,
-        "spacing": 10
+        "spacing": 10,
+        "show-passive-items": true
     },
     "clock": {
         // "timezone": "America/New_York",
