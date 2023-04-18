@@ -255,6 +255,7 @@
 (add-hook 'typescript-mode-hook
           (lambda ()
             (setq column-enforce-column 99)
+            (setq typescript-indent-level 2)
             (setq-local flycheck-executable-find #'flycheck-node_modules-executable-find)))
 
 (setq web-mode-content-types-alist
