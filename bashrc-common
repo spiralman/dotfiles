@@ -69,6 +69,7 @@ then
     pyenv virtualenvwrapper
 fi
 
+export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 export EDITOR=emacs
 
 function dynamic_title_prompt
