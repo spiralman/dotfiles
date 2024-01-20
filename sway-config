@@ -318,7 +318,7 @@ exec /usr/libexec/polkit-gnome-authentication-agent-1
 for_window [app_id="org.gnome.Weather"] floating enable
 for_window [title="DevTools"] floating enable
 for_window [title=".* is sharing your screen\.$"] move to scratchpad
-for_window [title="Android Emulator - .*" window_type="normal"] floating enable
+for_window [title="^Android Emulator - .*:\d{4}" window_type="normal"] floating enable
 for_window [title="^Emulator$" window_type="utility"] move to scratchpad
 for_window [title="Qalculate.*"] floating enable, sticky enable
 for_window [title="Eyedropper"] floating enable, sticky enable, resize set 10 ppt 30 ppt
