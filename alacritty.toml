@@ -1,5 +1,3 @@
-dynamic_title = true
-
 [bell]
 animation = "EaseOutSine"
 color = "#999999"
