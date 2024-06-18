@@ -26,8 +26,8 @@ set $calc qalculate-qt
 
 set $lock swaylock -f -i $HOME/.config/sway/background.png -s fill \
     --clock --timestr %r --datestr %F \
-    --fade-in 0.5 \
     --effect-blur 10x10 --effect-greyscale
+    # --fade-in 0.5 \ # Causes a crash (core dump) in Fedora 40
 
 ### Output configuration
 #
