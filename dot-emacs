@@ -240,6 +240,10 @@
       ;; (enable-flymake)
       ))
 
+(add-hook 'js-json-mode-hook
+          (lambda ()
+            (setq indent-tabs-mode nil)))
+
 (add-hook 'rust-mode-hook
           (lambda ()
             (setq column-enforce-column 99)
