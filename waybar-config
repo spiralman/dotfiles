@@ -6,7 +6,7 @@
     // Choose the order of the modules
     "modules-left": ["sway/workspaces", "sway/mode", "custom/media"],
     "modules-center": ["clock"],
-    "modules-right": ["custom/minikube", "custom/kubectl", "idle_inhibitor", "pulseaudio", "network", "cpu", "memory", "tray", "battery"],
+    "modules-right": ["custom/minikube", "custom/kubectl", "idle_inhibitor", "pulseaudio", "custom/tailscale", "network", "cpu", "memory", "tray", "battery"],
     // Modules configuration
     // "sway/workspaces": {
     //     "disable-scroll": true,
@@ -103,5 +103,11 @@
         "max-length": 40,
         "interval": 5,
         "exec": "$HOME/.local/bin/kubectl config current-context"
+    },
+    "custom/tailscale": {
+        "max-length": 40,
+        "interval": 5,
+        "exec": "$HOME/.local/bin/info-tailscale.sh",
+        "on-click": "$HOME/.local/bin/choose_vpn_config.sh"
     }
 }
